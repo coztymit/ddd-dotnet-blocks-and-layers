@@ -1,4 +1,7 @@
-# ddd-dotnet-blocks-and-layers
+
+# DDD introduce .NET
+
+# Project configuration
 Empty .NET 5.0 - WEB Application (not MVC) 
 
 Dependencies
@@ -21,5 +24,7 @@ Create new invoice with given number (GUID)
 
 * Example: localhost:5000/invoice/78d6eb0a-449f-4dc5-a511-d046e685af61
 
+
+# Dependecies direction 
 
 ![Zrzut ekranu 2021-09-28 o 16 38 23](https://user-images.githubusercontent.com/79380870/135109137-43c8db77-41ae-49aa-a390-ab61f7eedccc.png)
