@@ -1,5 +1,5 @@
 ﻿using System;
-namespace currency_exchange.exchange.currencypurchase.domain
+namespace exchange_infrastructure.currencypurchase.domain
 {
     public class CurrencyPurchase
     {

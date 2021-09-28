@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using itmdevlabs_currency_exchange.exchange.accounting.domain.policy;
+using exchange_domain.exchange.accounting.domain.policy;
 
-namespace itmdevlabs_currency_exchange.exchange.accounting.domain
+namespace exchange_domain.exchange.accounting.domain
 {
     public class BookKeeper
     {

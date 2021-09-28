@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using currency_exchange.exchange.accounting.application;
+using exchange_application.exchange.accounting.application;
 
-namespace currency_exchange.exchange.accounting.infrastructure
+namespace eexchange_infrastructure.exchange.accounting.infrastructure.rest
 {
     public class RabbitNotificationSender : NotificationSender
     {

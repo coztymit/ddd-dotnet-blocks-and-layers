@@ -1,5 +1,5 @@
 ﻿using System;
-namespace currency_exchange.exchange.advertisement.domain
+namespace exchange_infrastructure.exchange
 {
     public class Advertisement
     {

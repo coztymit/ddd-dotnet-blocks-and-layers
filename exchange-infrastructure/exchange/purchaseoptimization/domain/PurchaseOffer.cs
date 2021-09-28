@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace currency_exchange.exchange.purchaseoptimization.domain
+namespace exchange_infrastructure.exchange.purchaseoptimization.domain
 {
     public class PurchaseOffer
     {

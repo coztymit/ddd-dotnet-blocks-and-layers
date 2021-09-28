@@ -2,7 +2,7 @@
 using System.Reflection;
 using Autofac;
 
-namespace ex_domain
+namespace exchange_domain
 {
     public class DomainModule : Autofac.Module
     {

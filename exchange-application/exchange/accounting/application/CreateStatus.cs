@@ -1,5 +1,5 @@
 ﻿using System;
-namespace itmdevlabs_currency_exchange.exchange.accounting.application
+namespace exchange_application.exchange.accounting.application
 {
     public class CreateStatus
     {

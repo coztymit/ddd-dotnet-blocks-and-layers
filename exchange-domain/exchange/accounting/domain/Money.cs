@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using itmdevlabs_currency_exchange.exchange.accounting.domain.exceptions;
+using exchange_domain.exchange.accounting.domain.exceptions;
 
-namespace itmdevlabs_currency_exchange.exchange.accounting.domain
+namespace exchange_domain.exchange.accounting.domain
 {
     //VO odpowiedzialny za przetrzymywanie wartości pieniądza oraz waluty 
     class Money

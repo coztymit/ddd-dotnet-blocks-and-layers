@@ -1,7 +1,7 @@
 ﻿using System;
-using itmdevlabs_currency_exchange.exchange.accounting.application;
+using exchange_application.exchange.accounting.application;
 
-namespace currency_exchange.exchange.accounting.application
+namespace exchange_application.exchange.accounting.application
 {
     public interface IInvoiceApplicationService
     {

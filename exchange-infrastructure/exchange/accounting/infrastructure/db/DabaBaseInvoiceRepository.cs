@@ -1,7 +1,7 @@
 ﻿using System;
-using itmdevlabs_currency_exchange.exchange.accounting.domain;
+using exchange_domain.exchange.accounting.domain;
 
-namespace currency_exchange.exchange.accounting.infrastructure
+namespace exchange_infrastructure.exchange.accounting.infrastructure.db
 {
     public class DabaBaseInvoiceRepository : IInvoiceRepository
     {

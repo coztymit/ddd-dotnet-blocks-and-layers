@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
-using itmdevlabs_currency_exchange.exchange.accounting.application;
-using itmdevlabs_currency_exchange.exchange.accounting.domain;
-using itmdevlabs_currency_exchange.exchange.accounting.domain.policy;
+using exchange_application.exchange.accounting.application;
+using exchange_domain.exchange.accounting.domain;
+using exchange_domain.exchange.accounting.domain.policy;
 
-namespace currency_exchange.exchange.accounting.application
+namespace exchange_application.exchange.accounting.application
 {
     public class InvoiceApplicationService: IInvoiceApplicationService
     {

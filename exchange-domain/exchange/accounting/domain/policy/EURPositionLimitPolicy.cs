@@ -1,5 +1,5 @@
 ﻿using System;
-namespace itmdevlabs_currency_exchange.exchange.accounting.domain.policy
+namespace exchange_domain.exchange.accounting.domain.policy
 {
     public class EURPositionLimitPolicy : IPositionLimitPolicy
     {

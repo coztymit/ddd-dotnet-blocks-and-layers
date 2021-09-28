@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using Autofac;
-using ex_domain;
 
 namespace exchange_application
 {

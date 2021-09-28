@@ -1,5 +1,5 @@
 ﻿using System;
-namespace itmdevlabs_currency_exchange.exchange.accounting.domain.exceptions
+namespace exchange_domain.exchange.accounting.domain.exceptions
 {
     public class DifferentCurrenciesException : Exception
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using itmdevlabs_currency_exchange.exchange.accounting.domain;
+using exchange_domain.exchange.accounting.domain;
 
-namespace itmdevlabs_currency_exchange.exchange.accounting.application
+namespace exchange_application.exchange.accounting.application
 {
     public class InvoicePosition : IPosiionAttributes
     {

@@ -1,4 +1,4 @@
-﻿namespace itmdevlabs_currency_exchange.exchange.accounting.domain
+﻿namespace exchange_domain.exchange.accounting.domain
 {
     internal class Buyer
     {

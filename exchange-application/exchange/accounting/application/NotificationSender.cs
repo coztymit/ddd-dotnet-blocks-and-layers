@@ -1,5 +1,5 @@
 ﻿using System;
-namespace currency_exchange.exchange.accounting.application
+namespace exchange_application.exchange.accounting.application
 {
     public interface NotificationSender
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace currency_exchange.exchange.purchaseoptimization.domain
+namespace exchange_infrastructure.exchange.purchaseoptimization.domain
 {
     public class Optimalization
     {
