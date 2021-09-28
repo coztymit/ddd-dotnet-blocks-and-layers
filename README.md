@@ -13,7 +13,7 @@ localhost:5000
 
 # Test API 
 
-* Create new invoice with random number 
+Create new invoice with random number 
 
 * Example: localhost:5000/invoice/
 
