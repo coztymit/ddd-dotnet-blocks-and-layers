@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>exchange_ui</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.Mvc.Core" />
+    <None Remove="Autofac.Extensions.DependencyInjection" />
+    <None Remove="Autofac" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\exchange-application\exchange-application.csproj" />
+  </ItemGroup>
+</Project>
