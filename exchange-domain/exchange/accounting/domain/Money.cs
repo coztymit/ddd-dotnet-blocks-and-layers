@@ -58,11 +58,7 @@ namespace exchange_domain.exchange.accounting.domain
                    value == money.value;
 
         }
-        public override string ToString()
-        {
-            return value.ToString() + " currency:" + this.currency.ToString();
-        }
-
+   
         internal bool lessThan(Money valueToCompere)
         {
             //NIE WIEM CZY TO JEST DOBRZE NAPISANE - TESTY JEDNOSTKOWE!!! 
@@ -71,6 +67,11 @@ namespace exchange_domain.exchange.accounting.domain
                 return true;
             }
             return false;
+        }
+
+        public override string ToString()
+        {
+            return value.ToString() + " currency:" + this.currency.ToString();
         }
     }
 }

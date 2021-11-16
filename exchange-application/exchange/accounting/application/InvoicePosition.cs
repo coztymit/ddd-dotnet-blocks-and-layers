@@ -16,17 +16,17 @@ namespace exchange_application.exchange.accounting.application
             this.currency = currency;
         }
 
-        public string productNumber()
+        public string ProductNumber()
         {
             return number;
         }
 
-        public decimal productValue()
+        public decimal ProductValue()
         {
             return value;
         }
 
-        public string valueCurrency()
+        public string ValueCurrency()
         {
             return currency;
         }

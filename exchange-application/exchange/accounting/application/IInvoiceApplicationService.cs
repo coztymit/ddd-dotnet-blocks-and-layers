@@ -5,9 +5,9 @@ namespace exchange_application.exchange.accounting.application
 {
     public interface IInvoiceApplicationService
     {
-        public CreateStatus createInvoice(string number);
-        public CreateStatus createInvoice();
-        public CreateStatus craeteCorrection(String number);
+        public CreateStatus CreateInvoice(string number);
+        public CreateStatus CreateInvoice();
+        public CreateStatus CraeteCorrection(String number);
 
     }
 }

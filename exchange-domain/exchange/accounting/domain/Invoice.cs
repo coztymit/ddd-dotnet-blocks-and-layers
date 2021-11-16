@@ -80,14 +80,9 @@ namespace exchange_domain.exchange.accounting.domain
             }
         }
 
-        public override string ToString()
-        {
-            return number.ToString() + " : " + approveStatus.ToString() + " : "
-                 + positionsValue.ToString() + " : " + seller.ToString();
-        }
-
+       
         //invariant
-        private bool lessOrEqualsPositionLimit(int newPositionCount)
+        private bool LessOrEqualsPositionLimit(int newPositionCount)
         {
             if(this.positions.Count + newPositionCount > 10)
             {
@@ -96,7 +91,7 @@ namespace exchange_domain.exchange.accounting.domain
             return true;
         }
         //invariant
-        private bool valueLessOrEqualsMoneyLimit(Money newPositionValue)
+        private bool ValueLessOrEqualsMoneyLimit(Money newPositionValue)
         {
             var oldAndNewPositionValue = positionsValue.Add(newPositionValue);
             if (oldAndNewPositionValue.lessThan(positionValueLimit)) {
@@ -107,19 +102,25 @@ namespace exchange_domain.exchange.accounting.domain
 
         private void InvariantCheck(Position position)
         {
-            if (!lessOrEqualsPositionLimit(1))
+            if (!LessOrEqualsPositionLimit(1))
             {
                 throw new Exception();
             }
-            if (!valueLessOrEqualsMoneyLimit(position.PositionValue()))
+            if (!ValueLessOrEqualsMoneyLimit(position.PositionValue()))
             {
                 throw new Exception();
             }
         }
 
-        public String invoiceNumber()
+        public String InvoiceNumber()
         {
             return this.number.ToString();
+        }
+
+        public override string ToString()
+        {
+            return number.ToString() + " : " + approveStatus.ToString() + " : "
+                 + positionsValue.ToString() + " : " + seller.ToString();
         }
     }
 

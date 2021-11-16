@@ -13,24 +13,24 @@ namespace exchange_domain.exchange.accounting.domain
 
         }
 
-        public Invoice createInvoice(List<IPosiionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
+        public Invoice CreateInvoice(List<IPosiionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
         {
             //Okresla polityki 
-            return factory.createInvoice(possitionAttributes, limitPolicy);
+            return factory.CreateInvoice(possitionAttributes, limitPolicy);
         }
 
-        public Invoice createInvoiceCorrection(List<IPosiionAttributes> possitionAttributes)
+        public Invoice CreateInvoiceCorrection(List<IPosiionAttributes> possitionAttributes)
         {
-            return factory.createInvoice(possitionAttributes);
+            return factory.CreateInvoice(possitionAttributes);
         }
 
-        public Payment createPayment(Invoice invoice)
+        public Payment CreatePayment(Invoice invoice)
         {
             // na podstawie warunków biznesowych tworzy nowey obiekt platnosci 
             return new Payment();
         }
 
-        public IPositionLimitPolicy definePositionLimitPolicy()
+        public IPositionLimitPolicy DefinePositionLimitPolicy()
         {
             //tu powinna byc implementacja przypadkow okreslania polityki 
             return new PLNPositionLimitPolicy();

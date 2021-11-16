@@ -10,7 +10,7 @@ namespace exchange_infrastructure.exchange.accounting.infrastructure.rest
         {
         }
 
-        public void sendNotification(string invoiceNumber)
+        public void SendNotification(string invoiceNumber)
         {
             Debug.WriteLine("Rest: " + invoiceNumber);
         }

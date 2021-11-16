@@ -24,14 +24,14 @@ namespace exchange_application.exchange.accounting.application
             factory = new InvoiceFactory();
         }
 
-        public CreateStatus createInvoice()
+        public CreateStatus CreateInvoice()
         {
             //zarządzanie transakcjami
             List<IPosiionAttributes> invoicePositions = new List<IPosiionAttributes>();
             invoicePositions.Add(new InvoicePosition(100, "PLN"));
 
-            Invoice invoice = factory.createInvoice(invoicePositions);
-            invoiceRepository.save(invoice);
+            Invoice invoice = factory.CreateInvoice(invoicePositions);
+            invoiceRepository.Save(invoice);
 
 
             //foreach (NotificationSender sender in senders) {
@@ -39,67 +39,67 @@ namespace exchange_application.exchange.accounting.application
             // }
 
             //To oczywiscie moze zostac wzbogacone
-            return CreateStatus.Correct(invoice.invoiceNumber());
+            return CreateStatus.Correct(invoice.InvoiceNumber());
 
         }
-        public CreateStatus createInvoice(string invoiceNumber)
+        public CreateStatus CreateInvoice(string invoiceNumber)
         {
             //zarządzanie transakcjami
             List<IPosiionAttributes> invoicePositions = new List<IPosiionAttributes>();
             invoicePositions.Add(new InvoicePosition(100, "PLN"));
 
-            Invoice invoice = factory.createInvoice(invoiceNumber, invoicePositions);
-            invoiceRepository.save(invoice);
+            Invoice invoice = factory.CreateInvoice(invoiceNumber, invoicePositions);
+            invoiceRepository.Save(invoice);
 
 
             //foreach (NotificationSender sender in senders) {
-            //   sender.sendNotification(invoice.ToString());
+            //   sender.SendNotification(invoice.ToString());
             // }
 
             //To oczywiscie moze zostac wzbogacone
-            return CreateStatus.Correct(invoice.invoiceNumber());
+            return CreateStatus.Correct(invoice.InvoiceNumber());
 
         }
 
-        public CreateStatus createInvoiceByBookKeeper()
+        public CreateStatus CreateInvoiceByBookKeeper()
         {
             //Transformacja z ebiektów komunikacji
-            List<IPosiionAttributes> invoicePositions = createPosition();
+            List<IPosiionAttributes> invoicePositions = CreatePosition();
             
             BookKeeper bookKeeper = new BookKeeper();
 
-            IPositionLimitPolicy limitPolicy = bookKeeper.definePositionLimitPolicy();
+            IPositionLimitPolicy limitPolicy = bookKeeper.DefinePositionLimitPolicy();
 
-            Invoice invoice = bookKeeper.createInvoice(invoicePositions, limitPolicy);
-            invoiceRepository.save(invoice);
+            Invoice invoice = bookKeeper.CreateInvoice(invoicePositions, limitPolicy);
+            invoiceRepository.Save(invoice);
 
-            return CreateStatus.Correct(invoice.invoiceNumber());
+            return CreateStatus.Correct(invoice.InvoiceNumber());
 
         }
 
-        private static List<IPosiionAttributes> createPosition()
+        private static List<IPosiionAttributes> CreatePosition()
         {
             List<IPosiionAttributes> invoicePositions = new List<IPosiionAttributes>();
             invoicePositions.Add(new InvoicePosition(100, "PLN"));
             return invoicePositions;
         }
 
-        public CreateStatus craeteCorrection(string number)
+        public CreateStatus CraeteCorrection(string number)
         {
-            Invoice invoice = invoiceRepository.get(new Number(number));
+            Invoice invoice = invoiceRepository.Get(new Number(number));
            
             throw new NotImplementedException();
         }
 
         public void ApproveInvoice(string number)
         {
-            Invoice invoice = invoiceRepository.get(new Number(number));
+            Invoice invoice = invoiceRepository.Get(new Number(number));
             invoice.Approve();
-            invoiceRepository.save(invoice);
+            invoiceRepository.Save(invoice);
 
             BookKeeper bookKeeper = new BookKeeper();
 
-            Payment payment = bookKeeper.createPayment(invoice);
+            Payment payment = bookKeeper.CreatePayment(invoice);
 
         }
 

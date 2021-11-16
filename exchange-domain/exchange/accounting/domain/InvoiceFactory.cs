@@ -6,7 +6,7 @@ namespace exchange_domain.exchange.accounting.domain
 {
     public class InvoiceFactory
     {
-        public Invoice createInvoice(List<IPosiionAttributes> possitionAttributes)
+        public Invoice CreateInvoice(List<IPosiionAttributes> possitionAttributes)
         {
             Seller seller;
             Buyer buyer;
@@ -17,7 +17,7 @@ namespace exchange_domain.exchange.accounting.domain
             return PrepareInvoice (possitionAttributes, invoice);
         }
 
-        public Invoice createInvoice(String number, List<IPosiionAttributes> possitionAttributes)
+        public Invoice CreateInvoice(string number, List<IPosiionAttributes> possitionAttributes)
         {
 
             Seller seller;
@@ -29,12 +29,12 @@ namespace exchange_domain.exchange.accounting.domain
             return PrepareInvoice(possitionAttributes, invoice);
         }
 
-        public Invoice createInvoice(List<IPosiionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
+        public Invoice CreateInvoice(List<IPosiionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
         {
 
             //TO dla przyspeiszenie 
-            Seller seller = new Seller("ITMDevlab", "Jan", "Kowalski", new NIP());
-            Buyer buyer = new Buyer("ITMDevlab", "Jan", "Kowalski", new NIP());
+            Seller seller = new Seller("Coztymit", "Jan", "Kowalski", new NIP());
+            Buyer buyer = new Buyer("Coztymit", "Jan", "Kwiatkowski", new NIP());
 
             //Czy nie łamiemy tu wprowadznai agregatu w nieodpowieni stan? 
             Invoice invoice = new Invoice(seller, buyer);
@@ -49,7 +49,7 @@ namespace exchange_domain.exchange.accounting.domain
 
             possitionAttributes.ForEach(pos =>
                             invoice.AddPosition(
-                                    new Position(new ProductNumber(pos.productNumber()), new Money(pos.productValue())),
+                                    new Position(new ProductNumber(pos.ProductNumber()), new Money(pos.ProductValue())),
                                     limitPolicy
                                 )
                             );
@@ -59,8 +59,8 @@ namespace exchange_domain.exchange.accounting.domain
         private static void PreparSellerAndBayer(out Seller seller, out Buyer buyer)
         {
             //TO dla przyspeiszenie 
-            seller = new Seller("ITMDevlab", "Jan", "Kowalski", new NIP());
-            buyer = new Buyer("ITMDevlab", "Jan", "Kowalski", new NIP());
+            seller = new Seller("Coztymit", "Jan", "Kowalski", new NIP());
+            buyer = new Buyer("Coztymit", "Jan", "Kwiatkowski", new NIP());
         }
 
     }

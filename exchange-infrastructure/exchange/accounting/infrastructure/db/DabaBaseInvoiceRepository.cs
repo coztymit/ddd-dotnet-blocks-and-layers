@@ -5,17 +5,17 @@ namespace exchange_infrastructure.exchange.accounting.infrastructure.db
 {
     public class DabaBaseInvoiceRepository : IInvoiceRepository
     {
-        public Invoice find(Number number)
+        public Invoice Find(Number number)
         {
             throw new NotImplementedException();
         }
 
-        public Invoice get(Number number)
+        public Invoice Get(Number number)
         {
             throw new NotImplementedException();
         }
 
-        public void save(Invoice invoice)
+        public void Save(Invoice invoice)
         {
             Console.WriteLine(invoice.ToString());
            

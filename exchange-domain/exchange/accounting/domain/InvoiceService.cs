@@ -8,7 +8,7 @@ namespace exchange_domain.exchange.accounting.domain
             
         }
 
-        public Payment createPayment(Invoice invoice, PaymentPolicy policy)
+        public Payment CreatePayment(Invoice invoice, PaymentPolicy policy)
         {
             return new Payment();
         }
