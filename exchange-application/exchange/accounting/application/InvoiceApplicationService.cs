@@ -27,7 +27,7 @@ namespace exchange_application.exchange.accounting.application
         public CreateStatus CreateInvoice()
         {
             //zarządzanie transakcjami
-            List<IPosiionAttributes> invoicePositions = new List<IPosiionAttributes>();
+            List<IPositionAttributes> invoicePositions = new List<IPositionAttributes>();
             invoicePositions.Add(new InvoicePosition(100, "PLN"));
 
             Invoice invoice = factory.CreateInvoice(invoicePositions);
@@ -45,7 +45,7 @@ namespace exchange_application.exchange.accounting.application
         public CreateStatus CreateInvoice(string invoiceNumber)
         {
             //zarządzanie transakcjami
-            List<IPosiionAttributes> invoicePositions = new List<IPosiionAttributes>();
+            List<IPositionAttributes> invoicePositions = new List<IPositionAttributes>();
             invoicePositions.Add(new InvoicePosition(100, "PLN"));
 
             Invoice invoice = factory.CreateInvoice(invoiceNumber, invoicePositions);
@@ -64,7 +64,7 @@ namespace exchange_application.exchange.accounting.application
         public CreateStatus CreateInvoiceByBookKeeper()
         {
             //Transformacja z ebiektów komunikacji
-            List<IPosiionAttributes> invoicePositions = CreatePosition();
+            List<IPositionAttributes> invoicePositions = CreatePosition();
             
             BookKeeper bookKeeper = new BookKeeper();
 
@@ -77,9 +77,9 @@ namespace exchange_application.exchange.accounting.application
 
         }
 
-        private static List<IPosiionAttributes> CreatePosition()
+        private static List<IPositionAttributes> CreatePosition()
         {
-            List<IPosiionAttributes> invoicePositions = new List<IPosiionAttributes>();
+            List<IPositionAttributes> invoicePositions = new List<IPositionAttributes>();
             invoicePositions.Add(new InvoicePosition(100, "PLN"));
             return invoicePositions;
         }
@@ -100,7 +100,7 @@ namespace exchange_application.exchange.accounting.application
             BookKeeper bookKeeper = new BookKeeper();
 
             Payment payment = bookKeeper.CreatePayment(invoice);
-
+            //dalej dzałamy z payment
         }
 
     }

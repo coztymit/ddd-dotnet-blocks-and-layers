@@ -13,13 +13,13 @@ namespace exchange_domain.exchange.accounting.domain
 
         }
 
-        public Invoice CreateInvoice(List<IPosiionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
+        public Invoice CreateInvoice(List<IPositionAttributes> positionAttributes, IPositionLimitPolicy limitPolicy)
         {
             //Okresla polityki 
-            return factory.CreateInvoice(possitionAttributes, limitPolicy);
+            return factory.CreateInvoice(positionAttributes, limitPolicy);
         }
 
-        public Invoice CreateInvoiceCorrection(List<IPosiionAttributes> possitionAttributes)
+        public Invoice CreateInvoiceCorrection(List<IPositionAttributes> possitionAttributes)
         {
             return factory.CreateInvoice(possitionAttributes);
         }

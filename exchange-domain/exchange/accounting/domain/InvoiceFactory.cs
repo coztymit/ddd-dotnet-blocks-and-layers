@@ -6,7 +6,7 @@ namespace exchange_domain.exchange.accounting.domain
 {
     public class InvoiceFactory
     {
-        public Invoice CreateInvoice(List<IPosiionAttributes> possitionAttributes)
+        public Invoice CreateInvoice(List<IPositionAttributes> positionAttributes)
         {
             Seller seller;
             Buyer buyer;
@@ -14,10 +14,10 @@ namespace exchange_domain.exchange.accounting.domain
 
             Invoice invoice = new Invoice(seller, buyer);
 
-            return PrepareInvoice (possitionAttributes, invoice);
+            return PrepareInvoice (positionAttributes, invoice);
         }
 
-        public Invoice CreateInvoice(string number, List<IPosiionAttributes> possitionAttributes)
+        public Invoice CreateInvoice(string number, List<IPositionAttributes> positionAttributes)
         {
 
             Seller seller;
@@ -26,10 +26,10 @@ namespace exchange_domain.exchange.accounting.domain
 
             Invoice invoice = new Invoice(new Number(number), seller, buyer);
 
-            return PrepareInvoice(possitionAttributes, invoice);
+            return PrepareInvoice(positionAttributes, invoice);
         }
 
-        public Invoice CreateInvoice(List<IPosiionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
+        public Invoice CreateInvoice(List<IPositionAttributes> possitionAttributes, IPositionLimitPolicy limitPolicy)
         {
 
             //TO dla przyspeiszenie 
@@ -42,7 +42,7 @@ namespace exchange_domain.exchange.accounting.domain
             return PrepareInvoice(possitionAttributes, invoice);
         }
 
-        private static Invoice PrepareInvoice(List<IPosiionAttributes> possitionAttributes, Invoice invoice)
+        private static Invoice PrepareInvoice(List<IPositionAttributes> possitionAttributes, Invoice invoice)
         {
             //okresl polityke ilosci pozycji
             IPositionLimitPolicy limitPolicy = new PLNPositionLimitPolicy();

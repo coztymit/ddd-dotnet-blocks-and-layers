@@ -3,7 +3,7 @@ using exchange_domain.exchange.accounting.domain;
 
 namespace exchange_application.exchange.accounting.application
 {
-    public class InvoicePosition : IPosiionAttributes
+    public class InvoicePosition : IPositionAttributes
     {
         private string number;
         private decimal value;
