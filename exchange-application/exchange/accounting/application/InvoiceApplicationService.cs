@@ -35,7 +35,7 @@ namespace exchange_application.exchange.accounting.application
 
 
             //foreach (NotificationSender sender in senders) {
-            //   sender.sendNotification(invoice.ToString());
+            //   sender.SendNotification(invoice.ToString());
             // }
 
             //To oczywiscie moze zostac wzbogacone
