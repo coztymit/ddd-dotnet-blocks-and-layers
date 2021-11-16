@@ -7,7 +7,7 @@ namespace exchange_application.exchange.accounting.application
     {
         public CreateStatus CreateInvoice(string number);
         public CreateStatus CreateInvoice();
-        public CreateStatus CraeteCorrection(String number);
+        public CreateStatus CreateCorrection(String number);
 
     }
 }

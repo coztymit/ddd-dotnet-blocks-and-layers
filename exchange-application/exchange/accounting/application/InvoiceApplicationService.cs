@@ -84,7 +84,7 @@ namespace exchange_application.exchange.accounting.application
             return invoicePositions;
         }
 
-        public CreateStatus CraeteCorrection(string number)
+        public CreateStatus CreateCorrection(string number)
         {
             Invoice invoice = invoiceRepository.Get(new Number(number));
            

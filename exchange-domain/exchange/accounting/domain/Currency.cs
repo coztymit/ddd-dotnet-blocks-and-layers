@@ -2,6 +2,7 @@
 {
     class Currency
     {
+        public static Currency DEFAULT = new Currency("PLN");
         private string value;
 
         public Currency(string value)
@@ -12,8 +13,6 @@
             }
             this.value = value;
         }
-
-        public static Currency DEFAULT = new Currency("PLN");
 
         public override bool Equals(object obj)
         {

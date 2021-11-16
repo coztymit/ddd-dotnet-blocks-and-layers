@@ -26,7 +26,7 @@ namespace exchange_ui.exchange.ui
         //localhost:5000/invoice
         //przyklad localhost:5000/invoice/
 
-        public String Createinvoice()
+        public String CreateInvoice()
         {
             return invoiceApplicationService.CreateInvoice().ToString();
 
@@ -38,7 +38,7 @@ namespace exchange_ui.exchange.ui
         //Guid musi być w poprawnej formie
 
         [HttpGet("{number}")]
-        public String Createinvoice(string number)
+        public String CreateInvoice(string number)
         {
             return invoiceApplicationService.CreateInvoice(number).ToString();
         }
